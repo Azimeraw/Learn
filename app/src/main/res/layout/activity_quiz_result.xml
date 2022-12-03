@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_200"
+    android:layout_height="match_parent"
+    tools:context=".Quiz.QuizResult">
+
+    <TextView
+        android:id="@+id/quizresult"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:text="Quiz Result"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="138dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/winner" />
+
+        <TextView
+            android:id="@+id/congratulation"
+            android:layout_width="305dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:letterSpacing=".1"
+            android:text="Congratulations"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/completsuccessfull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:letterSpacing=".1"
+            android:text="You are completed the Quiz  SuccessFully"
+            android:textSize="16sp"
+            android:textColor="@color/teal_200"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginTop="30dp"
+            android:letterSpacing=".2"
+            android:text="Your Score"
+            android:textColor="@color/purple_700" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/scoreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing=".2"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalScoreTv"
+                android:layout_width="117dp"
+                android:layout_height="82dp"
+                android:letterSpacing=".2"
+                android:text="/10"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing=".2"
+                        android:text="Correct"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/correctTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing=".2"
+                        android:text="INCorrect"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/incorrectTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/shareBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_result"
+                    android:text="Share-Result"
+                    android:textAllCaps="false" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/retakequiz"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_result"
+                    android:text="Re-Take-Quiz"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
