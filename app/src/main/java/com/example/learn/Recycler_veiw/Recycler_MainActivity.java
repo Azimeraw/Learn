@@ -43,10 +43,8 @@ public class Recycler_MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_main);
         FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline
-        Objects.requireNonNull(getSupportActionBar()).hide();
-
+//        Objects.requireNonNull(getSupportActionBar()).hide();
         databaseReference = FirebaseDatabase.getInstance().getReference();
-
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
