@@ -16,7 +16,7 @@ public class DashBoardActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
-        buttonone=findViewById(R.id.customer);
+        buttonone=findViewById(R.id.student);
         buttontwo=findViewById(R.id.quiz_menuid);
         buttonone.setOnClickListener(new View.OnClickListener() {
             @Override
