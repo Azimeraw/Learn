@@ -23,13 +23,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdapter.ViewHolder> {
+public class StudentsRecyclerAdapter extends RecyclerView.Adapter<StudentsRecyclerAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<AddData> usersItemArrayList;
+    ArrayList<AddStudentData> usersItemArrayList;
     DatabaseReference databaseReference;
-
-    public UsersRecyclerAdapter(Context context, ArrayList<AddData> usersItemArrayList) {
+    public StudentsRecyclerAdapter(Context context, ArrayList<AddStudentData> usersItemArrayList) {
         this.context = context;
         this.usersItemArrayList = usersItemArrayList;
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -46,7 +45,7 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        AddData users = usersItemArrayList.get(position);
+        AddStudentData users = usersItemArrayList.get(position);
 
         holder.textName.setText("Name : " + users.getUserName());
         holder.textEmail.setText("Email : " + users.getUserEmail());
@@ -141,7 +140,7 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
                         if (newName.equals(name) && newEmail.equals(email) && newCountry.equals(country)) {
                             Toast.makeText(context, "you don't change anything", Toast.LENGTH_SHORT).show();
                         } else {
-                            databaseReference.child("USERS").child(id).setValue(new AddData(id, newName, newEmail, newCountry));
+                            databaseReference.child("USERS").child(id).setValue(new AddStudentData(id, newName, newEmail, newCountry));
                             Toast.makeText(context, "User Updated successfully!", Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }

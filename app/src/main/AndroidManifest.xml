@@ -13,13 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Learn">
         <activity
-            android:name=".MainDashboad"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data
@@ -27,7 +20,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Recycler_veiw.Recycler_MainActivity"
+            android:name=".Recycler_veiw.StudentRecycler_MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

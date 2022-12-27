@@ -6,7 +6,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,10 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.learn.Authontication.SignUpActivity;
-import com.example.learn.Quiz.QuizMainActivity;
-import com.example.learn.Quiz.QuizResult;
-import com.example.learn.Quiz.Start;
-import com.example.learn.Recycler_veiw.Recycler_MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

@@ -1,17 +1,17 @@
 package com.example.learn.Recycler_veiw;
 
 
-public class AddData {
+public class AddStudentData {
 
     String userID;
     String userName;
     String userEmail;
     String userCountry;
 
-    public AddData() {
+    public AddStudentData() {
     }
 
-    public AddData(String userID, String userName, String userEmail, String userCountry) {
+    public AddStudentData(String userID, String userName, String userEmail, String userCountry) {
         this.userID = userID;
         this.userName = userName;
         this.userEmail = userEmail;

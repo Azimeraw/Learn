@@ -27,14 +27,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Objects;
-public class Recycler_MainActivity extends AppCompatActivity {
+
+public class StudentRecycler_MainActivity extends AppCompatActivity {
 
     DatabaseReference databaseReference;
 
     RecyclerView recyclerView;
-    ArrayList<AddData> usersItemArrayList;
-    UsersRecyclerAdapter adapter;
+    ArrayList<AddStudentData> usersItemArrayList;
+    StudentsRecyclerAdapter adapter;
 
     Button buttonAdd;
 
@@ -56,7 +56,7 @@ public class Recycler_MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ViewDialogAdd viewDialogAdd = new ViewDialogAdd();
-                viewDialogAdd.showDialog(Recycler_MainActivity.this);
+                viewDialogAdd.showDialog(StudentRecycler_MainActivity.this);
             }
         });
 
@@ -71,10 +71,10 @@ public class Recycler_MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 usersItemArrayList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    AddData users = dataSnapshot.getValue(AddData.class);
+                    AddStudentData users = dataSnapshot.getValue(AddStudentData.class);
                     usersItemArrayList.add(users);
                 }
-                adapter = new UsersRecyclerAdapter(Recycler_MainActivity.this, usersItemArrayList);
+                adapter = new StudentsRecyclerAdapter(StudentRecycler_MainActivity.this, usersItemArrayList);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
             }
@@ -126,7 +126,7 @@ public class Recycler_MainActivity extends AppCompatActivity {
                         return;
                     }
                     else {
-                        databaseReference.child("USERS").child(id).setValue(new AddData(id, name, email, country));
+                        databaseReference.child("USERS").child(id).setValue(new AddStudentData(id, name, email, country));
                         Toast.makeText(context, "DONE!", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }

@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.example.learn.Authontication.SignUpActivity;
+
 import com.example.learn.Quiz.QuizMainActivity;
-import com.example.learn.Recycler_veiw.Recycler_MainActivity;
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.learn.Recycler_veiw.StudentRecycler_MainActivity;
+
 public class DashBoardActivity extends Activity {
     private Button logout;
     TextView buttonone,buttontwo;
@@ -31,7 +31,7 @@ public class DashBoardActivity extends Activity {
             @Override
             public void onClick(View view) {
                 //FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(DashBoardActivity.this, Recycler_MainActivity.class);
+                Intent intent = new Intent(DashBoardActivity.this, StudentRecycler_MainActivity.class);
                 startActivity(intent);
                 finish();
             }
