@@ -25,7 +25,7 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="138dp"
+            android:layout_width="143dp"
             android:layout_height="40dp"
             android:adjustViewBounds="true"
             android:src="@drawable/winner" />
@@ -70,8 +70,8 @@
 
             <TextView
                 android:id="@+id/scoreTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="69dp"
+                android:layout_height="50dp"
                 android:letterSpacing=".2"
                 android:text="0"
                 android:textColor="@color/white"
@@ -79,8 +79,8 @@
 
             <TextView
                 android:id="@+id/totalScoreTv"
-                android:layout_width="117dp"
-                android:layout_height="82dp"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
                 android:letterSpacing=".2"
                 android:text="/10"
                 android:textColor="@color/white"
@@ -112,8 +112,8 @@
 
                     <TextView
                         android:id="@+id/correctTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="45dp"
+                        android:layout_height="43dp"
                         android:layout_marginTop="10dp"
                         android:textColor="@color/white"
                         android:textSize="20sp"

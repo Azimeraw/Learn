@@ -13,6 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Learn">
         <activity
+            android:name=".MainDashboad"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data
@@ -60,13 +67,11 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        </activity>
         <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true" />
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
     </application>
 
 </manifest>
